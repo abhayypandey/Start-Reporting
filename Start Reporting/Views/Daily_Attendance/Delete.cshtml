@@ -1,0 +1,72 @@
+﻿@model Start_Reporting.Models.Daily_Attendance
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Daily_Attendance</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HereEmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HereEmailId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subnature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subnature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnplannedCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnplannedCount)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
